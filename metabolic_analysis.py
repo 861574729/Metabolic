@@ -246,7 +246,7 @@ def plot_time_courses(raw_data, metric_blocks, time_labels, sheet_name, group_or
 
         ax.set_title(name, fontsize=9, fontweight="bold")
         ax.set_xlabel("Study Day")
-        ax.legend(fontsize=7, loc="best")
+        ax.legend(fontsize=7, loc="upper left")
 
     # Hide unused subplots
     for idx in range(n_metrics, n_rows * n_cols):
@@ -296,7 +296,7 @@ def plot_pct_change_time_courses(raw_data, metric_blocks, time_labels, sheet_nam
         ax.set_title(f"{name} — % Change", fontsize=9, fontweight="bold")
         ax.set_xlabel("Study Day")
         ax.set_ylabel("% Change from Day 0")
-        ax.legend(fontsize=7, loc="best")
+        ax.legend(fontsize=7, loc="upper left")
 
     for idx in range(n_metrics, n_rows * n_cols):
         axes[idx // n_cols][idx % n_cols].set_visible(False)
